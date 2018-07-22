@@ -49,9 +49,6 @@ const checkRelationship = async ({ fbId, page }) => {
       done = [...done, await resolver(item)];
     }
     return done;
-    return haystack.reduce(async (acc, item) => {
-      return [...acc, await resolver(item)]
-    }, []);
   }
 
   const profilesDone = await processProfiles({
